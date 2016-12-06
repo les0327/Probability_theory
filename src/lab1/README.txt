@@ -1,0 +1,1 @@
+Simple tabular generator of pseudo random binary sequence based on LFSR

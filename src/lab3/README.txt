@@ -1,0 +1,1 @@
+Generation sequence of 2 numbers with some distribution function

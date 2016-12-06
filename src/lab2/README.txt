@@ -1,0 +1,1 @@
+Generation sequence of numbers with different distribution rules
