@@ -4,11 +4,11 @@ import java.util.Arrays;
 
 public class Binomial {
 
-    static final int COUNT = 100;
+    static final int COUNT = 20;
 
     public static void main(String[] args) {
         Binomial b = new Binomial();
-        b.test(0.2, 10);
+        b.test(0.5, 15);
     }
 
     public Binomial() {
@@ -26,7 +26,7 @@ public class Binomial {
         return factorial(n)/factorial(m)/factorial(n-m);
     }
 
-    private static double bernoulli(double p, int m, int n){
+    public static double bernoulli(double p, int m, int n){
         return Math.pow(p, m) * Math.pow(1 - p, n - m) * combination(m, n);
     }
 
