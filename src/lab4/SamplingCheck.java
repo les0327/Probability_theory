@@ -164,7 +164,7 @@ public class SamplingCheck {
         System.out.println(Arrays.toString(m));
 
         for (int i = 0; i < 3; i++)
-            x2 += Math.pow(m[i] - n*probability[i], 2)/n/probability[i];
+            x2 += Math.pow(m[i] - sample.length * probability[i], 2) / sample.length / probability[i];
 
         return x2;
     }
