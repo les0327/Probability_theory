@@ -16,6 +16,7 @@ public class SamplingCheck {
 
     private static HashMap<Double, Double> table = new HashMap<Double, Double>(){
         {
+            put(0.02, 0.01);
             put(0.04, 0.02);
             put(0.103, 0.05);
             put(0.211, 0.1);
@@ -181,8 +182,6 @@ public class SamplingCheck {
         for (Double k : table.keySet())
             if (Math.abs(k - x2) < Math.abs(key - x2))
                 key = k;
-
-        table.put(0.02, 0.01);
 
         return 1 - table.get(key);
     }
