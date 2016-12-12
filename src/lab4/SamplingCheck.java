@@ -16,6 +16,7 @@ public class SamplingCheck {
 
     private static HashMap<Double, Double> table = new HashMap<Double, Double>(){
         {
+            put(0.02, 0.01);
             put(0.04, 0.02);
             put(0.103, 0.05);
             put(0.211, 0.1);
@@ -50,8 +51,8 @@ public class SamplingCheck {
         sc.p = average/sc.n;
         System.out.println("p = " + sc.p);
 
-        double lim1 = (average + Arrays.stream(sample).min().getAsInt())/2;
-        double lim2 = (Arrays.stream(sample).max().getAsInt() + average)/2;
+        double lim1 = (average + sample[0])/2;
+        double lim2 = (sample[sample.length - 1] + average)/2;
 
 
         System.out.printf("Limit 1 = %f, limit 2 = %f\n", lim1, lim2);
@@ -181,8 +182,6 @@ public class SamplingCheck {
         for (Double k : table.keySet())
             if (Math.abs(k - x2) < Math.abs(key - x2))
                 key = k;
-
-        table.put(0.02, 0.01);
 
         return 1 - table.get(key);
     }
